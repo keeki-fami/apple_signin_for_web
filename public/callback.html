@@ -25,7 +25,7 @@
                     //fetch : URL：検証用サーバ , 
                     //JSON.stringify:json文字列に変換
                     //
-                    const res = await fetch("https://your-server-b.onrender.com/verify",{
+                    const res = await fetch("https://apple-login-server-butc.onrender.com",{
                         method:"POST",
                         headers:{"Content-Type":"application/json"},
                         body:JSON.stringify({
@@ -35,7 +35,7 @@
                     });
 
                     const result = await res.json();
-                    if(resilt.success){
+                    if(result.success){
                         location.href = "myapp://signin?status=ok";
                     }else{
                         location.href = "myapp://signin?status=fail";
@@ -43,6 +43,7 @@
                 }catch(e){
                     location.href = "myapp://signin?status=fail";
                 }
+	    }
             
             main();
         </script>
