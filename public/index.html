@@ -20,10 +20,10 @@
             AppleID.auth.init({
                 clientId:"com.sosuu.login",
                 scope:"name email",
-                redirectURI:"https://apple-login-server-butc.onrender.com",
+                redirectURI:"https://apple-login-server-butc.onrender.com/appleSignIn",
                 state :"randomCSRFToken",
                 nonce:nonce,
-		response_mode: "fragment",
+		response_mode: "form_post"
 
             });
         </script>
